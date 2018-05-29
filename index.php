@@ -3,9 +3,7 @@
 $link = mysqli_connect('localhost', 'root', '', 'phpm')  or die('Не удалось соединиться: ' . mysqli_error());
 echo 'Соединение успешно установлено';
 
-
 // Выполняем SQL-запрос
-// $query = $query("SELECT * FROM user", MYSQLI_USE_RESULT);
 $result = $link->query("SELECT * FROM user", MYSQLI_USE_RESULT) or die('Запрос не удался: ' . mysqli_error());
 
 // Выводим результаты в html
